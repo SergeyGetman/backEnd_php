@@ -7,6 +7,7 @@
 		private $connect = false;
 		
 		function __construct(){
+			if(!$this->connect){
 			$this->connect =  mysqli_connect(DB_HOST, DB_USER, DB_PASS);
 				if(!$this->connect){
 					 die('Could not connect: ' . mysqli_error());
@@ -14,6 +15,7 @@
 				if(!mysqli_select_db($this->connect, DB_NAME)){
 				   die("Could not select db". mysqli_error($this->connect));
 					}
+			}
 		}
 		
 		function __destruct(){	

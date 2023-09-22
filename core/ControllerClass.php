@@ -7,8 +7,12 @@
 		
 		
 		function __construct($name){
-			$this->connectModel($name);	
-			$this->connectView($name);	
+			if(!$this->model){
+				$this->connectModel($name);
+			}
+			if(!$this->view){
+				$this->connectView($name);
+			}
 		}
 		
 		function connectModel($name){

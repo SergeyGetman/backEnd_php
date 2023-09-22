@@ -10,7 +10,8 @@
 		$mvc->run();
 		
 	}else{
-		echo 'route no defined';
+		echo 'route no defined.  .\ <br />';
+		 echo 'route no defined. Current route: ' . Routes::$current_route;
 	}
 	
 ?>

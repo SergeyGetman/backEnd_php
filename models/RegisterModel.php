@@ -1,6 +1,6 @@
 <?php 
 
-
+//запис в БД
 	
 	class RegisterModel extends Model {
 		
@@ -15,6 +15,11 @@
 				return false;
 			}
 			return true;
+		}
+
+		function getDataFromDb() {
+			$sql = "SELECT * FROM users";
+			return $this->db->select($sql); 
 		}
 		
 	}

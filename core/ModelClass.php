@@ -5,7 +5,9 @@
 		class Model{
 			public $db = false;
 			function __construct(){
-			 $this->db = new DataBase;
+				if(!$this->db){
+					$this->db = new DataBase;
+				}
 			}
 		}
 
