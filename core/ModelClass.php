@@ -4,10 +4,10 @@
 	
 		class Model{
 			public $db = false;
+			public $validate = false;
 			function __construct(){
-				if(!$this->db){
 					$this->db = new DataBase;
-				}
+					$this->validate = new Validate;
 			}
 		}
 

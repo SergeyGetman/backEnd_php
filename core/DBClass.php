@@ -26,11 +26,15 @@
 			return mysqli_fetch_array(mysqli_query($this->connect, $sql_request));
 		}
 		
-		function insert($sql_query){
+		function insert($sql_query){ //insert запис в БД
 			
 				mysqli_query($this->connect, $sql_query);
+				return mysqli_insert_id($this->connect); //метод повернення останнього id
+		}
 
-				return mysqli_insert_id($this->connect);
+		function getID($data){
+			$id_new = $this->db->query($data);
+			
 		}
 	}
 

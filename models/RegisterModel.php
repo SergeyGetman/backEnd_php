@@ -10,11 +10,24 @@
 		
 		}
 		
+
 		function checkInData($data){
 			if(!isset($data['name']) || !isset($data['login']) || !isset($data['email']) || !isset($data['password'])){
-				return false;
+				return [
+					'status' => false,
+					'message' => 'no exists all data'
+				];
 			}
-			return true;
+			$valid_name = $this->validate->checkLength($data['name'], 5);
+			if(!$valid_name){
+				return [
+					'status' => false,
+					'message' => 'name is invalid'
+				];
+			}
+			return [
+				'status' => true,
+			];
 		}
 
 		function getDataFromDb() {
