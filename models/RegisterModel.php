@@ -12,6 +12,7 @@
 		
 
 		function checkInData($data){
+	
 			if(!isset($data['name']) || !isset($data['login']) || !isset($data['email']) || !isset($data['password'])){
 				return [
 					'status' => false,
