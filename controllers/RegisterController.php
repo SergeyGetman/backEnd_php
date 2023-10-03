@@ -2,15 +2,8 @@
 
 	class RegisterController extends Controller {
 		
-		function run(){
-
-			header("Access-Control-Allow-Origin: *");
-			header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
-			header("Access-Control-Allow-Headers: Content-Type");
-			header("Access-Control-Max-Age: 86400");
-			header('Content-Type: application/json');
-			header('Accept: *');
-
+		function run(){	
+ 
 			$form_data = (array)Routes::getPost();
 			
 			//$this->view->answer($form_data); 

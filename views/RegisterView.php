@@ -3,6 +3,8 @@
 	class RegisterView extends View {
 		function registerSuccess($user_id){
 
+			
+
 		  $this->answer(["status" => true, "user_id" => $user_id]); //ключ згначення 
 
 		}
