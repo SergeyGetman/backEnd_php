@@ -18,5 +18,4 @@ ini_set('display_errors', 1);
 	require_once("core/DBClass.php");
 	require_once("core/ValidateClass.php");
 
-
 ?>

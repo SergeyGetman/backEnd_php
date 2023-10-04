@@ -7,7 +7,7 @@ class LoginView extends View {
     }
 
     function loginError($message){
-        return [$message => "login failed"]
+        return [$message => "login failed"];
     }
 
 }
